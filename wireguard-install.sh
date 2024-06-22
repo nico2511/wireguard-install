@@ -475,7 +475,7 @@ echo "WireGuard is already installed."
 echo
 echo "Select an option:"
 echo "   1) Add a new client"
-echo "   2) Restart Wireguard
+echo "   2) Restart Wireguard"
 echo "   3) Remove an existing client"
 echo "   4) Remove WireGuard"
 echo "   5) Exit"
