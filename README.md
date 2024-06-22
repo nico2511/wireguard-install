@@ -1,8 +1,6 @@
-## wireguard-install
-WireGuard [road warrior](http://en.wikipedia.org/wiki/Road_warrior_%28computing%29) installer for Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS and Fedora.
+Fork de https://github.com/Nyr/wireguard-install
 
-This script will let you set up your own VPN server in no more than a minute, even if you haven't used WireGuard before. It has been designed to be as unobtrusive and universal as possible.
-
+Et ajout des DNS pour utiliser FDN.
 ### Installation
 Run the script and follow the assistant:
 
