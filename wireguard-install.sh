@@ -471,18 +471,18 @@ EOF
 	echo "New clients can be added by running this script again."
 else
 	clear
-	echo "WireGuard is already installed."
-	echo
-	echo "Select an option:"
-	echo "   1) Add a new client"
-	echo "   2) Remove an existing client"
-	echo "   3) Remove WireGuard"
-	echo "   4) Exit"
+echo "WireGuard is already installed."
+echo
+echo "Select an option:"
+echo "   1) Add a new client"
+echo "   2) Remove an existing client"
+echo "   3) Remove WireGuard"
+echo "   4) Exit"
+read -p "Option: " option
+until [[ "$option" =~ ^[1-4]$ ]]; do
+	echo "$option: invalid selection."
 	read -p "Option: " option
-	until [[ "$option" =~ ^[1-4]$ ]]; do
-		echo "$option: invalid selection."
-		read -p "Option: " option
-	done
+done
 	case "$option" in
 		1)
 			echo
