@@ -480,7 +480,7 @@ echo "   3) Remove an existing client"
 echo "   4) Remove WireGuard"
 echo "   5) Exit"
 read -p "Option: " option
-until [[ "$option" =~ ^[1-4]$ ]]; do
+until [[ "$option" =~ ^[1-5]$ ]]; do
 	echo "$option: invalid selection."
 	read -p "Option: " option
 done
@@ -511,6 +511,8 @@ done
 
   		2)
     			wg-quick down wg0 && wg-quick up wg0
+       exit
+       ;;
 		3)
 			# This option could be documented a bit better and maybe even be simplified
 			# ...but what can I say, I want some sleep too
