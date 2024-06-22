@@ -105,7 +105,7 @@ new_client_dns () {
 	echo "   4) OpenDNS"
 	echo "   5) Quad9"
 	echo "   6) AdGuard"
- 	echo "   7) French Data Network (FDN)
+ 	echo "   7) French Data Network (FDN)"
 	read -p "DNS server [1]: " dns
 	until [[ -z "$dns" || "$dns" =~ ^[1-7]$ ]]; do
 		echo "$dns: invalid selection."
