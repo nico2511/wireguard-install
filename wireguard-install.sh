@@ -475,9 +475,10 @@ echo "WireGuard is already installed."
 echo
 echo "Select an option:"
 echo "   1) Add a new client"
-echo "   2) Remove an existing client"
-echo "   3) Remove WireGuard"
-echo "   4) Exit"
+echo "   2) Restart Wireguard
+echo "   3) Remove an existing client"
+echo "   4) Remove WireGuard"
+echo "   5) Exit"
 read -p "Option: " option
 until [[ "$option" =~ ^[1-4]$ ]]; do
 	echo "$option: invalid selection."
@@ -507,7 +508,10 @@ done
 			echo "$client added. Configuration available in:" ~/"$client.conf"
 			exit
 		;;
-		2)
+
+  		2)
+    			wg-quick down wg0 && wg-quick up wg0
+		3)
 			# This option could be documented a bit better and maybe even be simplified
 			# ...but what can I say, I want some sleep too
 			number_of_clients=$(grep -c '^# BEGIN_PEER' /etc/wireguard/wg0.conf)
@@ -545,7 +549,7 @@ done
 			fi
 			exit
 		;;
-		3)
+		4)
 			echo
 			read -p "Confirm WireGuard removal? [y/N]: " remove
 			until [[ "$remove" =~ ^[yYnN]*$ ]]; do
@@ -625,7 +629,7 @@ done
 			fi
 			exit
 		;;
-		4)
+		5)
 			exit
 		;;
 	esac
