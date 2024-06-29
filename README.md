@@ -1,7 +1,7 @@
 Fork de https://github.com/Nyr/wireguard-install
 
-Ajout des DNS pour utiliser FDN.
-Ajout d'une ligne pour relancer WG. 
+- Ajout des DNS pour utiliser FDN.
+- Ajout d'une ligne pour relancer WG. 
 
 ### Installation
 Lancer le script et suivre l'assistant :
